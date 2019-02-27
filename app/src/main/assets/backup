@@ -1,0 +1,82 @@
+//System.out.println("fuck in!!!!!!!!!!!");
+//            String userAddress = "0x726725cBaE07643E813Ec13Ba3e81C49A322cd91";
+//            //String inject_SOFA = "window.SOFA = {config: {netVersion: '" + "1" + "', accounts: ['"+userAddress+"'], rcpUrl: '" + "https://mainnet.infura.io" + "'}}";
+//            String inject_SOFA = "window.SOFA = {" +
+//                    "config: {netVersion: \"1\", " +
+//                    "accounts: [\"" + userAddress + "\"]," +
+//                    "rcpUrl: \"https://mainnet.infura.io\"}" +
+//                    "};";
+//            StringBuilder inject_str = new StringBuilder();
+//            inject_str.append(inject_SOFA).append("\n");
+//
+//            InputStream stream =getResources().openRawResource(R.raw.sofaweb3);
+//            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+//
+//            InputStream stream2 =getResources().openRawResource(R.raw.webviewsupport);
+//            BufferedReader reader2 = new BufferedReader(new InputStreamReader(stream2));
+//
+//            try {
+//
+//                if (Build.VERSION.SDK_INT < 24) {
+//                    System.out.println("in !!!!!!!!!!!!!!!!!!!!!!");
+//                    String strLine2 = null;
+//                    while((strLine2 =  reader2.readLine()) != null) {
+//                        inject_str.append (strLine2).append("\n");
+//
+//                        System.out.println("fuck!!!!!!!!!!!!!:"+strLine2.length());
+//                    }
+//                }
+//
+//
+//
+//                String strLine = null;
+//                while((strLine =  reader.readLine()) != null) {
+//                    inject_str.append (strLine).append("\n");
+//
+//                    //System.out.println("fuck!!!!!!!!!!!!!:"+strLine.length());
+//                }
+//                webView.loadUrl("javascript:"+inject_str.toString());
+//                //webView.loadUrl("javascript:window.onload=function(){"+inject_str.toString()+"};");
+//
+//                /*
+//                webView.evaluateJavascript("javascript:"+inject_str.toString(), new ValueCallback<String>(){
+//                    @Override
+//                    public void onReceiveValue(String value) {
+//                        //此处为 js 返回的结果
+//                        System.out.println("inject web3!!!!!!!!!!!!!!:"+value);
+//                    }
+//                });
+//                */
+//            /*
+//            webView.evaluateJavascript("javascript:"+inject_str.toString(), new ValueCallback<String>(){
+//                @Override
+//                public void onReceiveValue(String value) {
+//                    //此处为 js 返回的结果
+//                    System.out.println("inject web3!!!!!!!!!!!!!!:"+value);
+//                }
+//            });
+//               */
+////                webView.loadUrl("javascript:"+"console.log(web3.eth.accounts);");
+////                webView.loadUrl("javascript:"+"console.log(web3);");
+//
+//                webView.evaluateJavascript("javascript:"+"console.log(web3.eth.accounts);", new ValueCallback<String>(){
+//                    @Override
+//                    public void onReceiveValue(String value) {
+//                        //此处为 js 返回的结果
+//                        System.out.println("return!!!!!!!!!!!!!!:"+value);
+//                    }
+//                });
+//                webView.evaluateJavascript("javascript:"+"console.log(web3)", new ValueCallback<String>(){
+//                    @Override
+//                    public void onReceiveValue(String value) {
+//                        //此处为 js 返回的结果
+//                        System.out.println("return!!!!!!!!!!!!!!:"+value);
+//                    }
+//                });
+//                //*/
+//
+//                //String text = reader.readLine();
+//                //System.out.println("fuck!!!!!!!!!!!!!:"+text);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }

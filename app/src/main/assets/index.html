@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+  <div>
+    <h3>hello world</h3>
+    <h3>hello world</h3>
+    <button onclick="console.log('tydebug:'+web3.eth.getAccount(console.log))">getAccounts</button>
+    <button onclick="console.log('typeof : '+typeof(SOFAHost))">SOFAHost</button>
+    <button onclick="console.log('web3.eth.accounts:'+web3.eth.accounts)">web3.eth.accounts</button>
+    <button onclick="checkNetWork()">SOFA</button>
+    <button onclick="console.log('web3.eth.defaultaccounts:'+web3.eth.defaultAccount)">SOFA</button>
+
+  </div>
+  <script>
+    function checkNetWork(){
+      web3.version.getNetwork((err, networkId) => {
+        console.log("tygavin:"+networkId)
+    });
+    }
+  </script>
+  </body>
+</html>
